@@ -28,19 +28,20 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding: 20px;
         }
 
         .logo {
             position: absolute;
-            top: 40px; /* Adjusts the distance from the top */
+            top: 40px;
             left: 50%;
-            transform: translateX(-50%); /* Centers horizontally */
-            max-width: 200px; /* adjust size */
+            transform: translateX(-50%);
+            max-width: 30vw; /* Use viewport width for logo size */
             z-index: 1;
         }
 
         h1 {
-            font-size: 3rem;
+            font-size: 5vw; /* Use viewport width for dynamic font size */
             font-weight: bold;
             letter-spacing: 5px;
             text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
@@ -49,7 +50,7 @@
         }
 
         p {
-            font-size: 1.2rem;
+            font-size: 3vw; /* Use viewport width for dynamic font size */
             margin-top: 20px;
             max-width: 700px;
             line-height: 1.5;
@@ -68,16 +69,36 @@
 
         /* Responsive Design */
         @media (max-width: 768px) {
+            .logo {
+                max-width: 100px; /* Logo size for mobile */
+            }
+
             h1 {
-                font-size: 2rem;
+                font-size: 8vw; /* Adjust h1 font size for smaller screens */
             }
 
             p {
-                font-size: 1rem;
+                font-size: 4vw; /* Adjust p font size for smaller screens */
+                max-width: 90%; /* Make paragraph text fit smaller screens */
             }
 
+            .container {
+                padding: 10px;
+            }
+        }
+
+        /* Small screens adjustments */
+        @media (max-width: 480px) {
             .logo {
-                max-width: 150px;
+                max-width: 80px; /* Adjust logo size for very small screens */
+            }
+
+            h1 {
+                font-size: 10vw; /* Larger font size for smaller screens */
+            }
+
+            p {
+                font-size: 5vw; /* Larger font size for smaller screens */
             }
         }
     </style>
